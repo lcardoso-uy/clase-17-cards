@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header{
+    box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644);
+}
+
+header, footer, button{
+    background-color:#00669F;
+}
+
+.barra-superior{
+    background-color: #1CD1B0;
+    padding: 5px 20px;
+    font-weight: bold;
+}
+
+.logo-container{
+    padding: 20px;
+}
+
+.logo-container h1{
+    font-weight: 600;
+}
+
+main{
+    width: 100%;
+    padding: 30px 100px;
+}
+
+.card{
+    width: 25%;
+    min-width: 250px;
+    text-align: center;
+    display: inline-block;
+    margin: 4%;
+    box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644);
+}
+
+.card .card-header{
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    height: 150px;
+}
+
+.card .card-header.batman{
+    background-image: url('img/batman-background.png');
+}
+
+.card .card-header.harley{
+    background-image: url('img/harley-background.png');
+}
+
+.card .card-header .heart-ico{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.card .card-header .profile-photo{
+    border-radius: 50px;
+    height: 110px;
+    position: relative;
+    top: 90px;
+    box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644);
+}
+
+.card .card-body{
+    background-color: #e7e7e7;
+    padding: 60px 20px 20px;
+
+}
+
+.card .card-body h3{
+    margin-top: 5px;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.card .card-body p{
+    text-align: left;
+    margin: 15px 0 30px;
+    color: #3f3f3f;
+    font-weight: 500;
+}
+
+.card .card-body button{
+    cursor: pointer;
+}
+
+button{
+    border: none;
+    padding: 20px 40px;
+    color: white;
+    font-size: 1em;
+}
+
+
+footer{
+    padding: 20px;
+    color: white;
+}
