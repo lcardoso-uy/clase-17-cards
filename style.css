@@ -1,30 +1,30 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0; /* saca los margenes por defecto del navegador, asi arrancamos desde 0 */
+    padding: 0; /* lo mismo aca*/
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
 header{
-    box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644);
+    box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644); /* sombra */
 }
 
 header, footer, button{
-    background-color:#00669F;
+    background-color:#00669F; /* dado que boton, header y footer comparten color de fondo, pongo todo aca*/
 }
 
 .barra-superior{
     background-color: #1CD1B0;
     padding: 5px 20px;
-    font-weight: bold;
+    font-weight: bold;/*cambia el grosor de la letra*/
 }
 
 .logo-container{
-    padding: 20px;
+    padding: 20px; /*padding: espaciado interno, 20px de cada lado*/
 }
 
 .logo-container h1{
-    font-weight: 600;
+    font-weight: 600; /*cambia el grosor de la letra*/
 }
 
 main{
@@ -33,21 +33,22 @@ main{
 }
 
 .card{
-    width: 25%;
-    min-width: 250px;
+    width: 25%;  /*le asigno un cuarto de la pantalla (porque el padre ocupa 100% del body)*/
+    min-width: 250px; /* pero si el 25% es menos de 250px, lo obligo a quedarse en 250px. Esto permite que si se achica la pantalla no se vean super finitas, si no que se muevan hacia abajo y mantengan cierto ancho*/
     text-align: center;
-    display: inline-block;
+    display: inline-block; /*hace que las cartas se muestren una al lado de otra, pero sin perder su tamaño de bloque (altura y anchura)*/
     margin: 4%;
+    border-radius: 15px 15px 0 0; /* borde redondeado - son 4 medidas porque quiero curvar las 2 de arriba y dejar las de abajo en 90 grados */
     box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644);
 }
 
-.card .card-header{
-    border-radius: 15px 15px 0 0;
+.card .card-header{ /*es el padre de las imagenes (corazon y foto redonda) por ende debe tener position relative, asi los hijos se adaptan en funcion de su padre*/
     position: relative;
-    height: 150px;
+    height: 150px; /* como su contenido que es la imagen, va a ser absolute, desaparecería por no tener contenido, entonces le doy una altura*/
+    border-radius: 15px 15px 0 0;
 }
 
-.card .card-header.batman{
+.card .card-header.batman{ /* la etiqueta .card-header además de las clases de arriba, se le aplica el fondo a cada una */
     background-image: url('img/batman-background.png');
 }
 
@@ -56,30 +57,30 @@ main{
 }
 
 .card .card-header .heart-ico{
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    cursor: pointer;
+    position: absolute; /*si su padre no fuera relative, se adaptarian al body. Como es relative su padre se adaptan dependiendo de donde está el*/
+    left: 10px; /* desde la izquierda, se corre 10px */
+    top: 10px; /* desde arriba, se corre 10px */
+    cursor: pointer; /* esto es una boludez, cambia la formita del mouse cuando pasa por arriba, entonces simula un link/boton */
 }
 
 .card .card-header .profile-photo{
-    border-radius: 50px;
-    height: 110px;
-    position: relative;
+    border-radius: 50px; /* redondea las 4 esquinas 50px dando aspecto de circulo*/
+    height: 110px; /* obligo a tener una altura definida por si las fotos fueran de distinto tamaño, las obligo a mantenerse como yo quiero*/
+    position: relative; /*lo mismo que con el corazon*/
     top: 90px;
-    box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644);
+    box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644); /*sombra de la imagen*/
 }
 
 .card .card-body{
     background-color: #e7e7e7;
-    padding: 60px 20px 20px;
+    padding: 60px 20px 20px; /* padding: relleno interior - arriba costados(izquierda y derecha) abajo - porque le pase 3 medidas*/
 
 }
 
 .card .card-body h3{
-    margin-top: 5px;
-    font-size: 2em;
-    font-weight: 300;
+    margin-top: 5px; /* le doy un margen arriba para darle espacio a la foto*/
+    font-size: 2em; /* 1em sería el tamaño del P, 2em es el doble*/
+    font-weight: 300; 
 }
 
 .card .card-body p{
@@ -90,18 +91,18 @@ main{
 }
 
 .card .card-body button{
-    cursor: pointer;
+    cursor: pointer; /* la misma boludez, asi el mouse parece una manito y simula un boton clickeable*/
 }
 
-button{
-    border: none;
-    padding: 20px 40px;
-    color: white;
-    font-size: 1em;
+button{ /* los botones vienen con estilo por defecto*/
+    border: none; /* saco el borde*/
+    padding: 20px 40px; /*le doy espacio interno asi no queda tan apretado*/
+    color: white; /* como antes le di background-color azul, la letra es blanca*/
 }
 
 
 footer{
     padding: 20px;
     color: white;
+    width: 100%;
 }
