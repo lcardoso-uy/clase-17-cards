@@ -29,12 +29,14 @@ header, footer, button{
 
 main{
     width: 100%;
-    padding: 30px 100px;
+    padding: 30px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card{
     width: 25%;  /*le asigno un cuarto de la pantalla (porque el padre ocupa 100% del body)*/
-    min-width: 250px; /* pero si el 25% es menos de 250px, lo obligo a quedarse en 250px. Esto permite que si se achica la pantalla no se vean super finitas, si no que se muevan hacia abajo y mantengan cierto ancho*/
     text-align: center;
     display: inline-block; /*hace que las cartas se muestren una al lado de otra, pero sin perder su tamaño de bloque (altura y anchura)*/
     margin: 4%;
@@ -44,6 +46,7 @@ main{
 
 .card .card-header{ /*es el padre de las imagenes (corazon y foto redonda) por ende debe tener position relative, asi los hijos se adaptan en funcion de su padre*/
     position: relative;
+    background-size: cover;
     height: 150px; /* como su contenido que es la imagen, va a ser absolute, desaparecería por no tener contenido, entonces le doy una altura*/
     border-radius: 15px 15px 0 0;
 }
@@ -100,9 +103,38 @@ button{ /* los botones vienen con estilo por defecto*/
     color: white; /* como antes le di background-color azul, la letra es blanca*/
 }
 
+.button-plus{
+    position: fixed;
+    background-color: #00669F;
+    font-size: 48px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
 
 footer{
     padding: 20px;
     color: white;
     width: 100%;
+}
+
+@media (max-width: 769px) {
+    main{
+        padding: 30px;
+    }
+
+    .card{
+        width: 40%;
+    }
+}
+
+@media (max-width: 525px){
+    .card{
+        width: 80%;
+    }
 }
