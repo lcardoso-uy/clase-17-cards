@@ -13,6 +13,10 @@ header, footer, button{
     background-color:#00669F; /* dado que boton, header y footer comparten color de fondo, pongo todo aca*/
 }
 
+a{
+    text-decoration: none;
+}
+
 .barra-superior{
     background-color: #1CD1B0;
     padding: 5px 20px;
@@ -36,6 +40,7 @@ main{
 }
 
 .card{
+    height: fit-content;
     width: 25%;  /*le asigno un cuarto de la pantalla (porque el padre ocupa 100% del body)*/
     text-align: center;
     display: inline-block; /*hace que las cartas se muestren una al lado de otra, pero sin perder su tamaño de bloque (altura y anchura)*/
@@ -112,7 +117,7 @@ button{ /* los botones vienen con estilo por defecto*/
     text-align: center;
     border-radius: 50px;
     color: white;
-    bottom: 10px;
+    bottom: 50%;
     right: 10px;
     cursor: pointer;
 }
