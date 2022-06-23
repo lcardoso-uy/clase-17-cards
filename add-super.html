@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clase 10</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="barra-superior">
+        <p>Descuentos 20%</p>
+      </div>
+      <div class="logo-container">
+        <h1>Heroes</h1>
+      </div>
+    </header>
+    <main>
+      <div class="form-container">
+        <h1>Añadí tu super!</h1>
+        <p>Agregá tu personaje favorito completando las opciones:</p>
+      <form action="">
+        <div class="columna">
+          <label for="name">*Nombre</label>
+          <input type="text" name="name" id="name" required>
+          <label for="date">Fecha</label>
+          <input type="date" id="date" name="date" placeholder="dd/mm/aaaa">
+          <textarea name="description" id="" cols="30" rows="20" placeholder="Descripción"></textarea>
+        </div>
+        <div class="columna">
+          <label for="especie">*Especie</label>
+          <select name="especie" id="especie">
+            <option value="Especie" selected>Especie</option>
+            <option value="Especie 1">Especie 1</option>
+            <option value="Especie 2">Especie 2</option>
+            <option value="Especie 3">Especie 3</option>
+          </select>
+          <label for="foto">Agregar foto</label>
+          <input type="file" name="foto" id="foto" required>
+          <label for="poderes">Poderes</label>
+          <div class="input-group">
+          <input type="checkbox" name="volar" id="volar">
+          <label for="volar">Volar</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" name="Superinteligencia" id="Superinteligencia">
+          <label for="Superinteligencia">Superinteligencia</label>
+          </div>
+
+          <div class="input-group">
+            <input type="checkbox" name="vista-rayos" id="vista-rayos">
+          <label for="vista-rayos">Vista de rayos laser</label>
+          </div>
+
+          <div class="input-group">
+            <input type="checkbox" name="Billetera gorda" id="Billetera gorda">
+          <label for="Billetera gorda">Billetera gorda</label>
+          </div>
+          <hr>
+
+          <label for="tipo-personaje">Tipo de personaje</label>
+
+          <div class="input-group">
+            <input type="radio" name="tipo-personaje" id="Heroe-heroina">
+          <label for="Heroe-heroina">Heroe / Heroina</label>
+          </div>
+
+          <div class="input-group">
+            <input type="radio" name="tipo-personaje" id="villano-villana">
+          <label for="villano-villana">Villano / Villana</label>
+          </div>
+        </div>
+      </form>
+      <a class="enviar">Añadir</a>
+    </div>
+      <div class="button-plus">
+        <p>+</p>
+      </div>
+    </main>
+    <footer>
+      <p>Todos los derechos reservados a FRONT END 1</p>
+    </footer>
+  </body>
+</html>
