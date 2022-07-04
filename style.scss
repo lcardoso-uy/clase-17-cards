@@ -1,0 +1,201 @@
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644); 
+
+    .barra-superior {
+        background-color: #1CD1B0;
+        padding: 5px 20px;
+        font-weight: bold;
+    }
+    
+    .logo-container {
+        padding: 20px; 
+
+        h1 {font-weight: 600; }
+    }
+}
+
+header, footer, button {
+    background-color:#00669F; }
+
+a {text-decoration: none;}
+
+
+
+main{
+    width: 100%;
+    padding: 30px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+        height: fit-content;
+        width: 25%;  
+        text-align: center;
+        display: inline-block; 
+        margin: 4%;
+        border-radius: 15px 15px 0 0; 
+        box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644);
+
+        .card-header{ 
+            position: relative;
+            background-size: cover;
+            height: 150px; 
+            border-radius: 15px 15px 0 0;
+
+            .batman{ 
+                background-image: url('img/batman-background.png');
+            }
+            .harley{
+                background-image: url('img/harley-background.png');
+            }
+            .heart-ico{
+                position: absolute; 
+                left: 10px; 
+                top: 10px; 
+                cursor: pointer; 
+            }
+            .profile-photo{
+                border-radius: 50px; 
+                height: 110px; 
+                position: relative; 
+                top: 90px;
+                box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644); 
+            }
+        }
+
+        .card-body{
+            background-color: #e7e7e7;
+            padding: 60px 20px 20px; 
+
+            h3{
+                margin-top: 5px; 
+                font-size: 2em; 
+                font-weight: 300; 
+            }
+            p{
+                text-align: left;
+                margin: 15px 0 30px;
+                color: #3f3f3f;
+                font-weight: 500;
+            }
+            button{
+                cursor: pointer;
+            }
+            
+        }
+    }
+}
+
+button{ 
+    border: none; 
+    padding: 20px 40px; 
+    color: white; 
+}
+
+.button-plus{
+    position: fixed;
+    background-color: #00669F;
+    font-size: 48px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    bottom: 50%;
+    right: 10px;
+    cursor: pointer;
+}
+
+footer{
+    padding: 20px;
+    color: white;
+    width: 100%;
+}
+
+
+.form-container{
+    background-color: #00669F;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5vh 10vw;
+    width: 70vw;
+    color: white;
+
+
+    h1, p{
+        width: 100%;
+        text-align: center;
+    }
+
+    form{
+        display: flex;
+    }
+    .columna{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 12.5px;
+    }
+
+    .columna > *{
+        margin: 5px;
+        border-radius: 10px;
+        padding: 10px;
+        border: none;
+    }
+    
+    hr{
+        border: 1px white solid !important;
+        padding: 0 !important;
+    }
+    
+    .enviar{
+        background-color: #1CD1B0;
+        border-radius: 23px;
+        padding: 20px 50px;
+        font-size: 40px;
+        font-weight: 700;
+        color: black;
+    }
+    
+    .enviar:hover{
+        background-color: #001d2d;
+        color: white;
+    }
+    
+    .input-group{
+        display: flex;
+        padding: 5px;
+    }
+    
+}
+
+
+@media (max-width: 769px) {
+    main{
+        padding: 30px;
+    }
+
+    .card{
+        width: 40%;
+    }
+}
+
+@media (max-width: 525px){
+    .card{
+        width: 80%;
+    }
+}

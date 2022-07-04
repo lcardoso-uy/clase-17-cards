@@ -1,215 +1,184 @@
-*{
-    margin: 0; /* saca los margenes por defecto del navegador, asi arrancamos desde 0 */
-    padding: 0; /* lo mismo aca*/
-    box-sizing: border-box;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-header{
-    box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644); /* sombra */
+header {
+  box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644);
+}
+header .barra-superior {
+  background-color: #1CD1B0;
+  padding: 5px 20px;
+  font-weight: bold;
+}
+header .logo-container {
+  padding: 20px;
+}
+header .logo-container h1 {
+  font-weight: 600;
 }
 
-header, footer, button{
-    background-color:#00669F; /* dado que boton, header y footer comparten color de fondo, pongo todo aca*/
+header, footer, button {
+  background-color: #00669F;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-.barra-superior{
-    background-color: #1CD1B0;
-    padding: 5px 20px;
-    font-weight: bold;/*cambia el grosor de la letra*/
+main {
+  width: 100%;
+  padding: 30px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .card {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 25%;
+  text-align: center;
+  display: inline-block;
+  margin: 4%;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644);
+}
+main .card .card-header {
+  position: relative;
+  background-size: cover;
+  height: 150px;
+  border-radius: 15px 15px 0 0;
+}
+main .card .card-header .batman {
+  background-image: url("img/batman-background.png");
+}
+main .card .card-header .harley {
+  background-image: url("img/harley-background.png");
+}
+main .card .card-header .heart-ico {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+main .card .card-header .profile-photo {
+  border-radius: 50px;
+  height: 110px;
+  position: relative;
+  top: 90px;
+  box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644);
+}
+main .card .card-body {
+  background-color: #e7e7e7;
+  padding: 60px 20px 20px;
+}
+main .card .card-body h3 {
+  margin-top: 5px;
+  font-size: 2em;
+  font-weight: 300;
+}
+main .card .card-body p {
+  text-align: left;
+  margin: 15px 0 30px;
+  color: #3f3f3f;
+  font-weight: 500;
+}
+main .card .card-body button {
+  cursor: pointer;
 }
 
-.logo-container{
-    padding: 20px; /*padding: espaciado interno, 20px de cada lado*/
+button {
+  border: none;
+  padding: 20px 40px;
+  color: white;
 }
 
-.logo-container h1{
-    font-weight: 600; /*cambia el grosor de la letra*/
+.button-plus {
+  position: fixed;
+  background-color: #00669F;
+  font-size: 48px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  color: white;
+  bottom: 50%;
+  right: 10px;
+  cursor: pointer;
 }
 
-main{
-    width: 100%;
-    padding: 30px 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+footer {
+  padding: 20px;
+  color: white;
+  width: 100%;
 }
 
-.card{
-    height: fit-content;
-    width: 25%;  /*le asigno un cuarto de la pantalla (porque el padre ocupa 100% del body)*/
-    text-align: center;
-    display: inline-block; /*hace que las cartas se muestren una al lado de otra, pero sin perder su tamaño de bloque (altura y anchura)*/
-    margin: 4%;
-    border-radius: 15px 15px 0 0; /* borde redondeado - son 4 medidas porque quiero curvar las 2 de arriba y dejar las de abajo en 90 grados */
-    box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644);
+.form-container {
+  background-color: #00669F;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5vh 10vw;
+  width: 70vw;
+  color: white;
 }
-
-.card .card-header{ /*es el padre de las imagenes (corazon y foto redonda) por ende debe tener position relative, asi los hijos se adaptan en funcion de su padre*/
-    position: relative;
-    background-size: cover;
-    height: 150px; /* como su contenido que es la imagen, va a ser absolute, desaparecería por no tener contenido, entonces le doy una altura*/
-    border-radius: 15px 15px 0 0;
+.form-container h1, .form-container p {
+  width: 100%;
+  text-align: center;
 }
-
-.card .card-header.batman{ /* la etiqueta .card-header además de las clases de arriba, se le aplica el fondo a cada una */
-    background-image: url('img/batman-background.png');
+.form-container form {
+  display: flex;
 }
-
-.card .card-header.harley{
-    background-image: url('img/harley-background.png');
+.form-container .columna {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 12.5px;
 }
-
-.card .card-header .heart-ico{
-    position: absolute; /*si su padre no fuera relative, se adaptarian al body. Como es relative su padre se adaptan dependiendo de donde está el*/
-    left: 10px; /* desde la izquierda, se corre 10px */
-    top: 10px; /* desde arriba, se corre 10px */
-    cursor: pointer; /* esto es una boludez, cambia la formita del mouse cuando pasa por arriba, entonces simula un link/boton */
+.form-container .columna > * {
+  margin: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
 }
-
-.card .card-header .profile-photo{
-    border-radius: 50px; /* redondea las 4 esquinas 50px dando aspecto de circulo*/
-    height: 110px; /* obligo a tener una altura definida por si las fotos fueran de distinto tamaño, las obligo a mantenerse como yo quiero*/
-    position: relative; /*lo mismo que con el corazon*/
-    top: 90px;
-    box-shadow: 0px 5px 10px rgba(105, 105, 105, 0.644); /*sombra de la imagen*/
+.form-container hr {
+  border: 1px white solid !important;
+  padding: 0 !important;
 }
-
-.card .card-body{
-    background-color: #e7e7e7;
-    padding: 60px 20px 20px; /* padding: relleno interior - arriba costados(izquierda y derecha) abajo - porque le pase 3 medidas*/
-
+.form-container .enviar {
+  background-color: #1CD1B0;
+  border-radius: 23px;
+  padding: 20px 50px;
+  font-size: 40px;
+  font-weight: 700;
+  color: black;
 }
-
-.card .card-body h3{
-    margin-top: 5px; /* le doy un margen arriba para darle espacio a la foto*/
-    font-size: 2em; /* 1em sería el tamaño del P, 2em es el doble*/
-    font-weight: 300; 
+.form-container .enviar:hover {
+  background-color: #001d2d;
+  color: white;
 }
-
-.card .card-body p{
-    text-align: left;
-    margin: 15px 0 30px;
-    color: #3f3f3f;
-    font-weight: 500;
+.form-container .input-group {
+  display: flex;
+  padding: 5px;
 }
-
-.card .card-body button{
-    cursor: pointer; /* la misma boludez, asi el mouse parece una manito y simula un boton clickeable*/
-}
-
-button{ /* los botones vienen con estilo por defecto*/
-    border: none; /* saco el borde*/
-    padding: 20px 40px; /*le doy espacio interno asi no queda tan apretado*/
-    color: white; /* como antes le di background-color azul, la letra es blanca*/
-}
-
-.button-plus{
-    position: fixed;
-    background-color: #00669F;
-    font-size: 48px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 50px;
-    color: white;
-    bottom: 50%;
-    right: 10px;
-    cursor: pointer;
-}
-
-footer{
-    padding: 20px;
-    color: white;
-    width: 100%;
-}
-
-/* add super css*/
-
-.form-container{
-    background-color: #00669F;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 5vh 10vw;
-    width: 70vw;
-    color: white;
-}
-
-.form-container h1, .form-container p{
-    width: 100%;
-    text-align: center;
-}
-
-.form-container form{
-    display: flex;
-}
-
-.form-container .columna{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding: 12.5px;
-}
-
-.form-container .columna > *{
-    margin: 5px;
-    border-radius: 10px;
-    padding: 10px;
-    border: none;
-}
-
-.form-container hr{
-    border: 1px white solid !important;
-    padding: 0 !important;
-}
-
-
-
-.form-container .enviar{
-    background-color: #1CD1B0;
-    border-radius: 23px;
-    padding: 20px 50px;
-    font-size: 40px;
-    font-weight: 700;
-    color: black;
-}
-
-.form-container .enviar:hover{
-    background-color: #001d2d;
-    color: white;
-}
-
-.form-container .input-group{
-    display: flex;
-    padding: 5px;
-}
-
-.form-container input, .form-container textarea{
-    
-}
-
-
 
 @media (max-width: 769px) {
-    main{
-        padding: 30px;
-    }
+  main {
+    padding: 30px;
+  }
 
-    .card{
-        width: 40%;
-    }
+  .card {
+    width: 40%;
+  }
 }
-
-@media (max-width: 525px){
-    .card{
-        width: 80%;
-    }
-}
+@media (max-width: 525px) {
+  .card {
+    width: 80%;
+  }
+}/*# sourceMappingURL=style.css.map */
